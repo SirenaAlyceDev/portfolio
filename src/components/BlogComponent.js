@@ -1,6 +1,6 @@
 import React from "react"
  
-function About(props) {
+function Blog(props) {
   return (
     <div>
       <h1>New Component</h1>
@@ -8,4 +8,4 @@ function About(props) {
   )
 }
  
-export default About;
+export default Blog;

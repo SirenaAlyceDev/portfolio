@@ -1,6 +1,6 @@
 import React from "react"
  
-function NewComponent(props) {
+function Contact(props) {
   return (
     <div>
       <h1>New Component</h1>
@@ -8,4 +8,4 @@ function NewComponent(props) {
   )
 }
  
-export default NewComponent;
+export default Contact;
