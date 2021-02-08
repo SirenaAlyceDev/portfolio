@@ -1,5 +1,6 @@
-import React from "react"
- 
+import React from "react";
+import { MainNavigation } from './HomeComponent';
+
 function Contact(props) {
   return (
     <div>

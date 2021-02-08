@@ -7,17 +7,22 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+  Jumbotron,
+  Row,
+  Col,
+  Container,
+  Button
+} from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const MainNavigation =(props) => {
+const MainNavigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="dark" dark expand='md'>
-        <NavbarBrand href='/'>SirenaAlyce</NavbarBrand>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">SirenaAlyce</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="ml-auto">
@@ -35,21 +40,81 @@ const MainNavigation =(props) => {
             </NavItem>
             <NavItem>
               <NavLink href="/Contact/">Contact</NavLink>
-            </NavItem>            
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
     </div>
   );
+};
+
+const VerticalNav = (props) => {
+  return (
+    <Nav vertical>
+      <NavItem>
+          <NavLink href="#">Link</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">Link</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="#">Another Link</NavLink>
+        </NavItem>
+    </Nav>
+  );
 }
 
 function Home(props) {
   return (
-    <div>
+    <React.Fragment>
       <MainNavigation />
-      <h1>New Component</h1>
-    </div>
-  )
+      <div>
+        <Jumbotron className="text-left">
+          <Row>
+            <Col xs="2">
+            <VerticalNav />
+            </Col>
+            <Col>
+            <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
+          <p>Freelance Full-Stack Web Developer</p>
+          <p>
+            Halvah jujubes pudding lemon drops brownie. Bear claw tootsie roll
+            danish topping cotton candy apple pie cake tiramisu toffee.
+            Cheesecake tootsie roll sweet roll bonbon powder pudding oat cake
+            powder. Bonbon bonbon croissant jelly-o sweet halvah.
+          </p>
+            </Col>
+            <Col xs="2">
+              <h2>Image goes here</h2>
+            </Col>
+          </Row>
+        </Jumbotron>
+        <Container>
+          <Row>
+            <Col>
+            <h1>About</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            <h1>Skills</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            <h1>Projects</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            <h1>Contact</h1>
+            <Button color="primary">Work With Me</Button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </React.Fragment>
+  );
 }
- 
+
 export default Home;
