@@ -1,11 +1,12 @@
 import React from "react";
-import { MainNavigation } from './HomeComponent';
+import Thumbnail from "./ThumbnailComponent";
 
  
 function Projects(props) {
   return (
     <div>
       <h1>Projects</h1>
+      <Thumbnail 
     </div>
   )
 }

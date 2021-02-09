@@ -1,11 +1,10 @@
 import React from "react";
-import { MainNavigation } from './HomeComponent';
 
  
 function Blog(props) {
   return (
     <div>
-      <h1>New Component</h1>
+      <h1>Blog Component</h1>
     </div>
   )
 }
