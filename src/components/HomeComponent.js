@@ -12,19 +12,20 @@ import {
 } from "reactstrap";
 import Thumbnail from "./ThumbnailComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-social/assets/css/font-awesome.css";
 import ProjectsButton from "./ProjectsButtonComponent";
 
 const VerticalNav = (props) => {
   return (
     <Nav vertical>
       <NavItem>
-        <NavLink to="#">Link</NavLink>
+        <NavLink to="#" className="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="#">Link</NavLink>
+        <NavLink to="#" className="btn btn-social-icon btn-instagramr"><span class="fa fa-instagram"></span></NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="#">Another Link</NavLink>
+      <NavLink to="#" className="btn btn-social-icon btn-github"><span class="fa fa-github"></span></NavLink>
       </NavItem>
     </Nav>
   );
