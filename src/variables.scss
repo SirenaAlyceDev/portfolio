@@ -1,0 +1,98 @@
+/* color scheme */
+/* #242582
+#553D67
+#f64c72
+#99738e
+#2f2fa2 */
+
+/* fonts */
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;*/
+
+/* h1 {
+  font-family: Playfair Display', serif;
+  font-size: 53px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 61.6279067993164px;
+  text-transform: none;
+  }
+  h2 {
+font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 46.2857131958008px;
+  text-transform: none;
+  color: #F21466;
+  }
+  h3 {
+  font-family: manus, over_the_rainbowregular, sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 46.2857131958008px;
+  text-transform: none;
+  color: #F21466;
+  }
+  h4 {
+  font-family: oswaldregular, sans-serif;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: #F20A66;
+  }
+  p {
+font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 28px;
+  text-transform: none;
+  color: #333333;
+  }
+  } */
+
+$bg-color: #242582;
+$content-font: 'Montserrat', sans-serif;
+$bg-jumbotron: #242582;
+$jumbotron-color: #fff;
+$social: #fff;
+
+@mixin h1style {
+  font-family: 'Playfair Display', serif;
+  font-size: 53px;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 61.6279067993164px;
+  text-transform: none;
+  color: #F64C72;
+}
+
+@mixin h2style {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 46.2857131958008px;
+    text-transform: none;
+  }
+
+  @mixin navbarbrand {
+    font-family: 'Playfair Display', serif;
+    color: #F64C72 !important;  
+  }
+
+  @mixin navlinks {
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+  }

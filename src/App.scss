@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+h1 {
+  @include h1style
+}
+
+h2 {
+  @include h2style
+}
+
+p {
+  font-family: $content-font;
+}
+
+.App {
+  text-align: center;
+}
+
+.bg-dark {
+  background-color: $bg-color !important;
+}
+
+a.navbar-brand {
+  @include navbarbrand
+}
+
+a.nav-link {
+  @include navlinks
+}
+
+.jumbotron {
+  background-color: $bg-jumbotron !important;
+  color: $jumbotron-color;
+}
+
+.fa {
+  color: $social;
+}

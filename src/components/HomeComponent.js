@@ -34,7 +34,7 @@ const VerticalNav = (props) => {
 function Home(props) {
   return (
     <>
-      <Jumbotron className="text-left">
+      <Jumbotron className="text-left" fluid>
         <Row>
           <Col xs="2">
             <VerticalNav />

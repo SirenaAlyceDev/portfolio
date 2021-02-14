@@ -1,6 +1,6 @@
-import "./App.css";
 import Main from "./components/MainComponent";
 import { BrowserRouter } from "react-router-dom";
+import './App.scss';
 
 function App() {
   return (
