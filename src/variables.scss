@@ -1,7 +1,7 @@
 /* color scheme */
-/* #242582
+/* #2126B2
 #553D67
-#f64c72
+#f64c71
 #99738e
 #2f2fa2 */
 
@@ -60,9 +60,9 @@ font-family: 'Montserrat', sans-serif;
   }
   } */
 
-$bg-color: #242582;
+$bg-color: #2126B2;
 $content-font: 'Montserrat', sans-serif;
-$bg-jumbotron: #242582;
+$bg-jumbotron: #2126B2;
 $jumbotron-color: #fff;
 $social: #fff;
 
@@ -70,12 +70,23 @@ $social: #fff;
   font-family: 'Playfair Display', serif;
   font-size: 53px;
   font-style: italic;
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: normal;
   line-height: 61.6279067993164px;
   text-transform: none;
-  color: #F64C72;
+  color: #f64c71;
 }
+
+@mixin jumbotronheaderstyle {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 61.6279067993164px;
+    text-transform: none;
+    color: #f64c71;
+  }
 
 @mixin h2style {
     font-family: 'Montserrat', sans-serif;
@@ -89,7 +100,9 @@ $social: #fff;
 
   @mixin navbarbrand {
     font-family: 'Playfair Display', serif;
-    color: #F64C72 !important;  
+    font-weight: bold;
+    color: #f64c71 !important;  
+    font-style: italic;
   }
 
   @mixin navlinks {

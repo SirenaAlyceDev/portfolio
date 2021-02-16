@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../images/logo192.png";
+import profile from "../images/IMG_1382-removebg-preview.png";
 import {
   Nav,
   NavItem,
@@ -36,10 +37,10 @@ function Home(props) {
     <>
       <Jumbotron className="text-left" fluid>
         <Row>
-          <Col xs="2">
+          <Col xs="1" className="align-self-center">
             <VerticalNav />
           </Col>
-          <Col>
+          <Col className="align-self-center">
             <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
             <p>Freelance Full-Stack Web Developer</p>
             <p>
@@ -49,8 +50,8 @@ function Home(props) {
               powder. Bonbon bonbon croissant jelly-o sweet halvah.
             </p>
           </Col>
-          <Col xs="2">
-            <h2>Image goes here</h2>
+          <Col xs="4" className="align-self-end">
+            <img src={profile} className="img-fluid" alt="profile pic" />
           </Col>
         </Row>
       </Jumbotron>

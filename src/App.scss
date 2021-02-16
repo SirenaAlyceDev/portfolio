@@ -8,6 +8,10 @@ h2 {
   @include h2style
 }
 
+h1.display-3 {
+  @include jumbotronheaderstyle
+}
+
 p {
   font-family: $content-font;
 }
@@ -31,6 +35,8 @@ a.nav-link {
 .jumbotron {
   background-color: $bg-jumbotron !important;
   color: $jumbotron-color;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .fa {
