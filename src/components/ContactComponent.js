@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Row, Col, Container, Button, Form, Label, Input } from "reactstrap";
 
 function Contact(props) {
@@ -17,9 +17,12 @@ function Contact(props) {
     const newValue = event.target.value;
     setUserInput({ [name]: newValue });
   };
-  const { register, handleSubmit, watch, control, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(watch("firstName"));
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (e,data) => {
+    console.log(data);
+    alert(`firstname: ${userInput.firstName}\n email: ${userInput.email}\n message: ${userInput.message}`);
+  }
+  // console.log(watch("email"));
 
   return (
     <Container>
@@ -36,45 +39,37 @@ function Contact(props) {
           value={userInput.firstName}
           onChange={handleChange}
           name="firstName"
-          innerRef={register({ required: true, maxLength: 30 })}
+          innerRef={register({ required: true })}
         />
         {errors.firstName && errors.firstName.type === "required" && (
-          <span>This is required</span>
+          <div>This is required</div>
         )}
-        {/* <Label>Email</Label>
+        <Label>Email</Label>
         <Input
           type="email"
-          name="email"
+          id="email"
           value={userInput.email}
           onChange={handleChange}
+          name="email"
+          innerRef={register({ required: true })}
         />
+        {errors.email && errors.email.type === "required" && (
+          <div>This is required</div>
+        )}
         <Label>Message</Label>
         <Input
           type="text"
-          name="message"
+          id="message"
           value={userInput.message}
           onChange={handleChange}
-        /> */}
-        <input type="submit" />
-      </Form>
-      {/* <Form onSubmit={handleSubmit(onSubmit)}>
-        <Label>Name</Label>
-        <Input
-          type="text"
-          id="name"
-          value={userInput.firstName}
-          onChange={handleChange}
-          name="firstName"
-          innerRef={register({ required: true, maxLength: 30 })}
+          name="message"
+          innerRef={register({ required: true })}
         />
-        {errors.firstName && errors.firstName.type === "required" && (
-          <span>This is required</span>
+        {errors.message && errors.message.type === "required" && (
+          <div>This is required</div>
         )}
-        {errors.name && errors.name.type === "maxLength" && (
-          <span>Max length exceeded</span>
-        )}
-        <input type="submit" />
-      </Form> */}
+        <Button type="submit">Submit</Button>
+      </Form>
     </Container>
   );
 }
