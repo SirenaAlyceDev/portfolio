@@ -20,13 +20,19 @@ const VerticalNav = (props) => {
   return (
     <Nav vertical>
       <NavItem>
-        <NavLink to="#" className="btn btn-social-icon btn-twitter"><span class="fa fa-twitter"></span></NavLink>
+        <NavLink to="#" className="btn btn-social-icon btn-twitter">
+          <span class="fa fa-twitter"></span>
+        </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="#" className="btn btn-social-icon btn-instagramr"><span class="fa fa-instagram"></span></NavLink>
+        <NavLink to="#" className="btn btn-social-icon btn-instagramr">
+          <span class="fa fa-instagram"></span>
+        </NavLink>
       </NavItem>
       <NavItem>
-      <NavLink to="#" className="btn btn-social-icon btn-github"><span class="fa fa-github"></span></NavLink>
+        <NavLink to="#" className="btn btn-social-icon btn-github">
+          <span class="fa fa-github"></span>
+        </NavLink>
       </NavItem>
     </Nav>
   );
@@ -42,12 +48,14 @@ function Home(props) {
           </Col>
           <Col className="align-self-center">
             <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
-            <p>Freelance Full-Stack Web Developer</p>
+            <p className="font-weight-bold">
+              Freelance Full-Stack Web Developer & Data Analyst
+            </p>
             <p>
-              Halvah jujubes pudding lemon drops brownie. Bear claw tootsie roll
-              danish topping cotton candy apple pie cake tiramisu toffee.
-              Cheesecake tootsie roll sweet roll bonbon powder pudding oat cake
-              powder. Bonbon bonbon croissant jelly-o sweet halvah.
+              Lover of all things <strong>data and development</strong>, <strong>tech</strong> 
+              enthusiast, self-proclaimed <strong>lifeling learner</strong>, <strong>problem solver and
+              goal-setter</strong>, dog lover, <strong>Black Woman</strong>, curiosity is
+              my middle name.
             </p>
           </Col>
           <Col xs="4" className="align-self-end">
@@ -58,17 +66,13 @@ function Home(props) {
       <Container>
         <Row>
           <Col>
-            <h1>About</h1>
+            <h2>What I Do</h2>
+            <Button color="primary">Download CV</Button>
           </Col>
         </Row>
         <Row>
           <Col>
-            <h1>Skills</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h1>Projects</h1>
+            <h2>Projects</h2>
             <Row>
               <Col>
                 <Thumbnail
@@ -103,8 +107,14 @@ function Home(props) {
         </Row>
         <Row>
           <Col>
-            <h1>Contact</h1>
-            <Button color="primary">Work With Me</Button>
+            <h2>Latest On The Blog</h2>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <h2>Work With Me</h2>
+            <Button color="primary">Let's Get Started!</Button>
           </Col>
         </Row>
       </Container>

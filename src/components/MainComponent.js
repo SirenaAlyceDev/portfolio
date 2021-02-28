@@ -17,7 +17,7 @@ function Main(props) {
           <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/projects" component={Projects} />
-          <Route path="/blog" component={Blog} />
+          <Route path="/techincolr" component={Blog} />
           <Route path="/contact" component={Contact} />
           <Redirect to="/home" />
         </Switch>

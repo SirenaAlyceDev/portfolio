@@ -89,13 +89,14 @@ $social: #fff;
   }
 
 @mixin h2style {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 36px;
     font-style: normal;
     font-weight: normal;
     letter-spacing: normal;
     line-height: 46.2857131958008px;
     text-transform: none;
+    color: #f64c71;
   }
 
   @mixin navbarbrand {
