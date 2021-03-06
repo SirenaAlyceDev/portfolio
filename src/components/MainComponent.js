@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import Header from "./HeaderComponent";
+import Footer from './FooterComponent';
 import Home from "./HomeComponent";
 import About from "./AboutComponent";
 import Blog from "./BlogComponent";
@@ -21,6 +22,7 @@ function Main(props) {
           <Route path="/contact" component={Contact} />
           <Redirect to="/home" />
         </Switch>
+        <Footer />
       </div>
     </React.Fragment>
   );

@@ -12,33 +12,46 @@ import {
   Button,
 } from "reactstrap";
 import Thumbnail from "./ThumbnailComponent";
+import WhatIDoThumbnail from './WhatIDoComponent';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-social/assets/css/font-awesome.css";
 import ProjectsButton from "./ProjectsButtonComponent";
+import { useHistory } from 'react-router-dom';
 
-const VerticalNav = (props) => {
+const VerticalNav = () => {
   return (
     <Nav vertical>
       <NavItem>
-        <NavLink to="#" className="btn btn-social-icon btn-twitter">
+        <NavLink to="https://twitter.com/sirenaalyce" className="btn btn-social-icon btn-twitter">
           <span class="fa fa-twitter"></span>
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="#" className="btn btn-social-icon btn-instagramr">
+        <NavLink to="https://www.instagram.com/sirenaalyce.io/" className="btn btn-social-icon btn-instagramr">
           <span class="fa fa-instagram"></span>
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink to="#" className="btn btn-social-icon btn-github">
+        <NavLink to="https://github.com/SirenaAlyceDev" className="btn btn-social-icon btn-github">
           <span class="fa fa-github"></span>
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink to="https://www.linkedin.com/in/sirenaalycegandy/" className="btn btn-social-icon btn-linkedin">
+          <span class="fa fa-linkedin"></span>
         </NavLink>
       </NavItem>
     </Nav>
   );
 };
 
-function Home(props) {
+const Home = () => {
+  const history = useHistory();
+  const handleRedirect = (event) => {
+    event.preventDefault();
+    history.push("/Contact");
+  }
+
   return (
     <>
       <Jumbotron className="text-left" fluid>
@@ -67,6 +80,14 @@ function Home(props) {
         <Row>
           <Col>
             <h2>What I Do</h2>
+            <Row>
+              <Col>
+                <WhatIDoThumbnail />
+              </Col>
+              <Col>
+                <WhatIDoThumbnail />
+              </Col>
+            </Row>
             <Button color="primary">Download CV</Button>
           </Col>
         </Row>
@@ -114,7 +135,7 @@ function Home(props) {
         <Row>
           <Col>
             <h2>Work With Me</h2>
-            <Button color="primary">Let's Get Started!</Button>
+            <Button color="primary" onClick={handleRedirect}>Let's Get Started!</Button>
           </Col>
         </Row>
       </Container>
