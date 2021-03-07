@@ -111,3 +111,24 @@ $social: #fff;
     font-family: 'Montserrat', sans-serif;
     color:#fff;
   }
+
+  @mixin blog-navlinks {
+    font-family: 'Montserrat', sans-serif;
+    color:#2126B2;
+  }
+
+  @mixin buttons {
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+    background-color: #2126B2;
+    border: none;
+    margin: 10px;
+  }
+
+  @mixin buttons-hover {
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+    background-color: #f64c71;
+    border: none;
+    margin: 10px;
+  }

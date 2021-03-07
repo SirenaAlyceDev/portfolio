@@ -4,8 +4,12 @@ import {
   Col,
   Container,
   Button,
+  // Nav,
+  // NavItem,
+  // NavLink
 } from "reactstrap";
 import Thumbnail from "./ThumbnailComponent";
+import fintech from "../images/fintech.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-social/assets/css/font-awesome.css";
 
@@ -50,18 +54,11 @@ function Blog(props) {
           <br />
           <Button>Read More</Button>
         </Col>
-        <Thumbnail source="" alt="feature blog post image" />
-        <Col></Col>
+        <Col>
+        <img source={fintech} className="img-fluid" alt="feature blog post" />
+        </Col>
       </Row>
-      <Row>
-        <Col>Explore:</Col>
-        <Col>Learning</Col>
-        <Col>In The News</Col>
-        <Col>Professional Development</Col>
-        <Col>Personal Development</Col>
-        <Col>Freelancing</Col>
-      </Row>
-      <Row>
+      <Row className="mb-2">
         <Col>
           <h2>Latest On The Blog</h2>
           <Row>
@@ -69,7 +66,7 @@ function Blog(props) {
               <Thumbnail
                 source=""
                 alt=""
-                title="blog post 1"
+                title="What is fintech?"
                 subtitle="technologies used"
                 description="short case study about project"
               />
@@ -78,7 +75,7 @@ function Blog(props) {
               <Thumbnail
                 source=""
                 alt=""
-                title="blog post 2"
+                title="React Fundamentals"
                 subtitle="technologies used"
                 description="short case study about project"
               />
@@ -87,7 +84,7 @@ function Blog(props) {
               <Thumbnail
                 source=""
                 alt=""
-                title="blog post 3"
+                title="What is Data Management?"
                 subtitle="technologies used"
                 description="short case study about project"
               />

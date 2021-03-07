@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../images/logo192.png";
+import budgetweb from "../images/budget-web-app.png";
+import budgetmobile from "../images/budget-mobile-app_resized.png";
 import profile from "../images/IMG_1382-removebg-preview.png";
 import {
   Nav,
@@ -72,7 +73,7 @@ const Home = () => {
             </p>
           </Col>
           <Col xs="4" className="align-self-end">
-            <img src={profile} className="img-fluid" alt="profile pic" />
+            <img src={profile} className="img-fluid rounded-circle" alt="profile pic" />
           </Col>
         </Row>
       </Jumbotron>
@@ -88,7 +89,7 @@ const Home = () => {
                 <WhatIDoThumbnail />
               </Col>
             </Row>
-            <Button color="primary">Download CV</Button>
+            <Button className="home-button" color="primary">Timeline</Button>
           </Col>
         </Row>
         <Row>
@@ -97,28 +98,19 @@ const Home = () => {
             <Row>
               <Col>
                 <Thumbnail
-                  source={logo}
-                  alt=""
-                  title="project 1"
-                  subtitle="technologies used"
+                  source={budgetweb}
+                  alt="budget web app"
+                  title="Budget Web App"
+                  subtitle="React JS"
                   description="short case study about project"
                 />
               </Col>
               <Col>
                 <Thumbnail
-                  source={logo}
-                  alt=""
-                  title="project 2"
-                  subtitle="technologies used"
-                  description="short case study about project"
-                />
-              </Col>
-              <Col>
-                <Thumbnail
-                  source={logo}
-                  alt=""
-                  title="project 3"
-                  subtitle="technologies used"
+                  source={budgetmobile}
+                  alt="budget mobile app"
+                  title="Budget Mobile App"
+                  subtitle="React Native"
                   description="short case study about project"
                 />
               </Col>
@@ -135,7 +127,7 @@ const Home = () => {
         <Row>
           <Col>
             <h2>Work With Me</h2>
-            <Button color="primary" onClick={handleRedirect}>Let's Get Started!</Button>
+            <Button className="home-button" onClick={handleRedirect}>Let's Get Started!</Button>
           </Col>
         </Row>
       </Container>

@@ -11,7 +11,7 @@ function ProjectsButton() {
   }
 
   return (
-    <Button type="button" onClick={handleClick}>
+    <Button type="button" className="home-button" onClick={handleClick}>
       See More Projects{" "}
     </Button>
   );

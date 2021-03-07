@@ -26,12 +26,13 @@ function Contact(props) {
 
   return (
     <Container>
-      <Row>
-        <Col>
-          <h1>Let's Connect!</h1>
-        </Col>
-      </Row>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Row>
+          <Col>
+          <p className="mt-4">Let's Work Together</p>
+          <h1 className="mt-n4">Contact Me</h1>{" "}
+          </Col>
+        </Row>
+      <Form className="vh-100" onSubmit={handleSubmit(onSubmit)}>
         <Label>First Name</Label>
         <Input
           type="text"

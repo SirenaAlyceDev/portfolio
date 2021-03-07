@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  CardDeck,
   Card,
   CardImg,
   CardText,
@@ -11,7 +12,8 @@ import {
 function Thumbnail(props) {
   return (
     <div>
-      <Card>
+      <CardDeck>
+        <Card className="h-100">
         <CardImg
           top
           width="100%"
@@ -23,7 +25,8 @@ function Thumbnail(props) {
           <CardSubtitle className="mb-2 text-muted">{props.subtitle}</CardSubtitle>
           <CardText>{props.description}</CardText>
         </CardBody>
-      </Card>
+        </Card>
+      </CardDeck>
     </div>
   );
 }
